@@ -1,0 +1,23 @@
+{
+  "name": "maze",
+  "version": "0.1.0",
+  "description": "Deterministically generate perfect mazes",
+  "keywords": [
+    "maze",
+    "generator"
+  ],
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Brandon Semilla (https://github.com/semibran)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/semibran/maze.git"
+  },
+  "dependencies": {
+    "cell": "github:semibran/cell",
+    "directions": "github:semibran/directions#v1.0.0",
+    "grid": "github:semibran/grid#v1.0.0",
+    "random": "github:semibran/random#v1.0.0",
+    "vector2d": "github:semibran/vector2d#v1.0.0"
+  }
+}
