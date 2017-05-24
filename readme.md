@@ -15,22 +15,17 @@ npm install semibran/maze
 const { Maze, ends } = require('maze')
 ```
 
-A `Maze` is a plain object with the fields `width`, `height`, and `cells`, and a `Cell` is just an `{ x, y }` pair.
+See [`test.js`](https://github.com/semibran/maze/blob/master/test.js) for an extensive example. You could also clone this repository and run the script locally if you'd like to test the maze generator for yourself.
 
-See [`/test.js`](https://github.com/semibran/maze/blob/master/test.js) for a more extensive example. You could also clone this repository and run the script locally if you'd like to test the maze generator for yourself.
-
-### `Maze`
-Generate a `Maze` of the specified `width` and `height` with the given [`seed`](https://github.com/semibran/random#seed).
+### `Maze(width, height, seed)`
+Generate a `Maze` of the specified `width` and `height` with the given `seed`.
 ```js
-var maze = Maze(25, 25)(Seed(Math.PI))
+var maze = Maze(25, 25, Math.PI)
 ```
-This function is curried, so you could assign it to a variable and generate multiple mazes of that specific size later on.
-```js
-var generateMaze = Maze(25, 25)
-```
+A `Maze` is just a plain array of `{ x, y }` pairs (cells).
 
-### `ends`
-Find all the dead ends in the given maze and returns a list of cells denoting their positions.
+### `ends(maze)`
+Find all the dead ends in the given `maze` and returns a list of cells denoting their positions.
 ```js
 console.log(`This maze has ${ends(maze).length} dead ends.`)
 ```

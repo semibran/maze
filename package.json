@@ -15,9 +15,9 @@
   },
   "dependencies": {
     "cell": "github:semibran/cell",
-    "directions": "github:semibran/directions#v1.0.0",
+    "direction": "github:semibran/direction#v0.1.0",
+    "frand": "^0.1.0",
     "grid": "github:semibran/grid#v1.0.0",
-    "random": "github:semibran/random#v1.0.0",
     "vector2d": "github:semibran/vector2d#v1.0.0"
   }
 }

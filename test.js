@@ -1,5 +1,4 @@
 const { Maze, ends } = require('./')
-const { Seed } = require('random')
 const { equals } = require('vector2d')
 const { index, cells } = require('grid')
 const sprites = {
@@ -7,17 +6,17 @@ const sprites = {
 	wall: String.fromCharCode(0x2588).repeat(2)
 }
 
-var seed = Seed(Math.random())
-var maze = Maze(25, 25)(seed)
+var size = 25
+var maze = Maze(size, size, Math.random())
 var world = {
-	width: maze.width,
-	height: maze.height,
-	tiles: new Array(maze.width * maze.height)
+	width: size,
+	height: size,
+	tiles: new Array(size * size)
 }
 
 for (var cell of cells(world)) {
 	world.tiles[index(world, cell)] =
-		maze.cells.find(other => equals(cell, other))
+		maze.find(other => equals(cell, other))
 			? 'floor'
 			: 'wall'
 }
