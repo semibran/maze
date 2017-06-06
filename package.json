@@ -14,5 +14,8 @@
  "repository": {
   "type": "git",
   "url": "https://github.com/semibran/maze.git"
+ },
+ "scripts": {
+  "test": "node test"
  }
 }

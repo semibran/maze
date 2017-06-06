@@ -9,7 +9,7 @@ Note that a "node" does not necessarily have to be a regular grid cell - it can 
 
 ## install
 ```sh
-npm install semibran/maze
+npm install maze
 ```
 
 ## usage
